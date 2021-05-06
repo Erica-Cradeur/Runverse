@@ -1,0 +1,195 @@
+*{
+  background: #495867;
+  font-family:Courier New;
+}
+
+body {
+	
+}
+
+#logo{
+  display: flex-inline;
+  max-height: 250px; 
+}
+
+/*Make content area fill the entire browser window */
+html, .fullscreen {
+	display: flex;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+/* Center the content in the browser window */
+.container {
+	margin: auto;
+	text-align: center;
+}
+
+
+
+#name, #date{
+  border: 2px solid #C18C5D;
+  border-radius: 4px;
+  font-size: 12pt;
+  padding: 10px 10px;
+  margin: 8px 5;
+  color: white;
+  width: 200px;
+}
+
+.workoutContainer{
+  display: absolute;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin: 5px;
+}
+
+.workoutContainer input {
+  display: flex;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+.workoutContainer:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.workoutContainer input:checked ~ .checkmark {
+  background-color: #C18C5D;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.workoutContainer input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.workoutContainer .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#z1, #z2, #z3, #other, #workoutP, #OverallWP, #OverallMP, #checkP, #soreness, #fatigue, #stressed, #injury, #otherP, #dehydration, #tightness, #tired{
+  color: white;
+}
+
+#z1num, #z2num, #z3num, #otherTextbox{
+    border: 2px solid #C18C5D;
+    border-radius: 4px;
+    font-size: 12pt;
+    padding: 10px 10px;
+    margin: 10px 10px;
+    color: white;
+    width: 50px;
+}
+
+#otherTextbox{
+  width: 200px;
+}
+
+/* slider bar */
+.slider {
+  -webkit-appearance: none;
+  width: 90%;
+  height: 15px;
+  border-radius: 5px;   
+  background: #ECCBAF;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  margin: 10px;
+}
+
+/* slider knob */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; 
+  background: #E7AD99;
+  cursor: pointer;
+}
+
+/* knob range */
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #E7AD99;
+  cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb:hover{
+  background-color:#C18C5D;
+}
+
+#workoutTextbox, #mentalTextbox{
+  border: 2px solid #C18C5D;
+  border-radius: 4px;
+  font-size: 12pt;
+  padding: 10px 10px;
+  margin: 8px 5;
+  color: white;
+  width: 400px;
+  height: 100px;
+}
+
+#submit, #email{
+  background-color:#CE796B;
+  border-radius:42px;
+  border:2px solid #E6AD99;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Courier New;
+  font-size:15px;
+  font-weight:bold;
+  padding:12px 25px;
+  text-decoration:none;
+  text-shadow:0px 0px 0px #ce786b;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#submit:hover, #email:hover {
+  background-color:#C18C5D;
+}
+
+#submit:active, #email:hover{
+  position:relative;
+  top:1px;
+}
