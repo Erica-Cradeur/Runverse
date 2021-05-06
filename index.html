@@ -13,13 +13,13 @@
 
 	<script LANGUAGE="JavaScript" type="text/javascript">
 	function display() {
-	  DispWin = window.open('','NewWin', 'toolbar=no,status=no,width=400,height=400')
+	  //DispWin = window.open('','NewWin', 'toolbar=no,status=no,width=400,height=400')
 	  //NAME+DATE
-	  message = "<b>Name: </b>" + document.workoutForm.name.value + "<br>";
-	  message += "<b>Date: </b>" + document.workoutForm.date.value + "<br>";
+	  message = "<b style='background-color:white'>Name: </style></b>" + document.workoutForm.name.value + "<br>";
+	  message += "<b style='background-color:white'>Date: </style></b>" + document.workoutForm.date.value + "<br>";
 
 	  //WORKOUT
-	  message += "<b>Workout: </b><br>";
+	  message += "<b style='background-color:white'>Workout: </style></b><br>";
 	  if(document.workoutForm.z1num.value > 0){
 	  	message += document.workoutForm.z1num.value + "z1 <br>";
 	  }
@@ -34,15 +34,15 @@
 	  }
 
 	  //OVERALL WORKOUT FEELING
-	  message += "<b>Physical Scale (1-10): </b>" + document.workoutForm.physicalRange.value + "<br>";
+	  message += "<b style='background-color:white'>Physical Scale (1-10): </style></b>" + document.workoutForm.physicalRange.value + "<br>";
 	  message += document.workoutForm.workoutTextbox.value + "<br><br>";
 
 	  //OVERALL MENTAL FEELING
-	  message += "<b>Mental Scale (1-10): </b>" + document.workoutForm.mentalRange.value + "<br>";
+	  message += "<b style='background-color:white'>Mental Scale (1-10): </style></b>" + document.workoutForm.mentalRange.value + "<br>";
 	  message += document.workoutForm.mentalTextbox.value + "<br><br>";
 
 	  //CHECK ALL THAT APPLIES
-	  message += "<b>I am feeling: </b><br>";
+	  message += "<b style='background-color:white'>I am feeling: </style></b><br>";
 	  if(document.querySelector('#tiredID:checked') !== null){
 	  	message += "tired <br>";
 	  }
@@ -68,7 +68,8 @@
 	  message += "<br><br> Thanks Coach!";
 	  message += "<br> -Erica Cradeur";
 
-	  DispWin.document.write(message);
+	  document.getElementById("outputDiv").innerHTML = message;
+	  //DispWin.document.write(message);
 	}
 </script>
 
@@ -177,6 +178,8 @@
 		</form>
   		<input type="button" value="Generate" id="submit" onClick="display();">
   		<a href="mailto:ChrisGannon@creighton.edu" id="email">Email</a>
+  		<div id="outputDiv" style="background-color:white">Log will Generate Here!</div>
+  		<br>
   		</div>
 </div>​
 	<script src="js/main.js"></script>
