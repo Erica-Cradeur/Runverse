@@ -1,0 +1,23 @@
+{
+	"name": "Runverse Running Logs",
+	"short_name": "Runverse",
+	"icons": [{
+		"src": "images/Runverse.png",
+		"sizes": "128x128",
+		"type": "image/png",
+		"purpose": "any"
+	}, {
+		"src": "images/RunverseLarge.png",
+		"sizes": "144x144",
+		"type": "image/png",
+		"purpose": "any"
+	}],
+	
+	"lang": "en-US",
+	"start_url": "/Runverse/index.html",
+	"display": "standalone",
+	"prefer_related_applications": false,
+	"background_color": "#495867",
+	"theme_color": "#495867"
+	
+}

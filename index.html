@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang"en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="theme-color" content="white"/> 
+	<title >Runverse</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="manifest" href="manifest.json">
+	<link rel="script" href="js/main.js">
+	<link rel="icon" href="Runverse.png" type="image/x-icon" />   
+	<meta name="msapplication-TileColor" content="#FFFFFF">
+
+	<script LANGUAGE="JavaScript" type="text/javascript">
+	function display() {
+	  DispWin = window.open('','NewWin', 'toolbar=no,status=no,width=400,height=400')
+	  //NAME+DATE
+	  message = "<b>Name: </b>" + document.workoutForm.name.value + "<br>";
+	  message += "<b>Date: </b>" + document.workoutForm.date.value + "<br>";
+
+	  //WORKOUT
+	  message += "<b>Workout: </b><br>";
+	  if(document.workoutForm.z1num.value > 0){
+	  	message += document.workoutForm.z1num.value + "z1 <br>";
+	  }
+	  if(document.workoutForm.z2num.value > 0){
+	  	message += document.workoutForm.z2num.value + "z2 <br>";
+	  }
+	  if(document.workoutForm.z3num.value > 0){
+	  	message += document.workoutForm.z3num.value + "z3 <br>";
+	  }
+	  else {
+	  	message += document.workoutForm.otherTextbox.value + "<br>";
+	  }
+
+	  //OVERALL WORKOUT FEELING
+	  message += "<b>Physical Scale (1-10): </b>" + document.workoutForm.physicalRange.value + "<br>";
+	  message += document.workoutForm.workoutTextbox.value + "<br><br>";
+
+	  //OVERALL MENTAL FEELING
+	  message += "<b>Mental Scale (1-10): </b>" + document.workoutForm.mentalRange.value + "<br>";
+	  message += document.workoutForm.mentalTextbox.value + "<br><br>";
+
+	  //CHECK ALL THAT APPLIES
+	  message += "<b>I am feeling: </b><br>";
+	  if(document.querySelector('#tiredID:checked') !== null){
+	  	message += "tired <br>";
+	  }
+	  if(document.querySelector('#tightnessID:checked') !== null){
+	  	message += "muscle tightness <br>";
+	  }
+	  if(document.querySelector('#sorenessID:checked') !== null){
+	  	message += "sore <br>";
+	  }
+	  if(document.querySelector('#fatiguedID:checked') !== null){
+	  	message += "fatigued <br>";
+	  }
+	  if(document.querySelector('#stressedID:checked') !== null){
+	  	message += "stressed <br>";
+	  }
+	  if(document.querySelector('#dehydratedID:checked') !== null){
+	  	message += "dehydrated <br>";
+	  }
+	  if(document.querySelector('#injuredID:checked') !== null){
+	  	message += "injured <br>";
+	  }
+	  
+	  message += "<br><br> Thanks Coach!";
+	  message += "<br> -Erica Cradeur";
+
+	  DispWin.document.write(message);
+	}
+</script>
+
+
+</head>
+<body class="fullscreen" onload="regSW();">
+	<div class="container">
+		<img src="images/RunverseLarge.png" alt="Runverse Logo" id="logo"/>
+		
+		<form name="workoutForm" id="WorkoutForm">
+		<div id="namecontainer">
+			<input type="textbox" value="Name" id="name">
+			<input type="textbox" value="05-06-2021" id="date">
+		</div>
+
+			<p id="workoutP"><b>Workout:</b></p>
+
+			<label class="workoutContainer">
+				<input type="checkbox" checked="checked">
+				<span class="checkmark"></span>
+			</label>
+			<label for="z1" id="z1">z1</label>
+			<input type="number" id="z1num" min="10"><br>
+
+
+			<label class="workoutContainer">
+				<input type="checkbox">
+				<span class="checkmark"></span>
+			</label>
+			<label for="z2" id="z2">z2</label>
+			<input type="number" id="z2num" min="0"><br>
+
+
+			<label class="workoutContainer">
+				<input type="checkbox">
+				<span class="checkmark"></span>
+			</label>
+			<label for="z3" id="z3">z3</label>
+			<input type="number" id="z3num" min="0"><br>
+
+
+			<label class="workoutContainer">
+				<input type="checkbox" id="otherWorkoutTextbox">
+				<span class="checkmark"></span>
+			</label>
+			<label for="other" id="other">other</label>
+			<input type="text" id="otherTextbox"/>
+
+
+		<div class="slidecontainer">
+			<p id="OverallWP"><b>Overall Workout Feeling</b></p>
+  			<input type="range" min="0" max="10" value="1" class="slider" id="physicalRange">
+
+  			<textarea rows="5" cols="60" id="workoutTextbox">Expand Here...</textarea>
+  			<p id="OverallMP"><b>Overall Mental Feeling</b></p>
+  			<input type="range" min="0" max="10" value="1" class="slider" id="mentalRange">
+  			<textarea rows="5" cols="60" id="mentalTextbox">Expand Here...</textarea>
+		</div>
+
+		<div class="adjectivescontainer">
+			<p id="checkP"><b>Check All That Applies:</b></p>
+
+			<label class="workoutContainer">
+				<input type="checkbox" id="tiredID">
+				<span class="checkmark"></span>
+			</label>
+			<label for="tired" id="tired">Tired</label>
+
+			<label class="workoutContainer">
+				<input type="checkbox" id="tightnessID">
+				<span class="checkmark"></span>
+			</label>
+			<label for="tightness" id="tightness">Tightness</label>
+
+			<label class="workoutContainer">
+				<input type="checkbox" id="sorenessID">
+				<span class="checkmark"></span>
+			</label>
+			<label for="soreness" id="soreness">Soreness</label>
+
+			<label class="workoutContainer">
+				<input type="checkbox" id="fatiguedID">
+				<span class="checkmark"></span>
+			</label>
+			<label for="fatigue" id="fatigue">Fatigued</label>
+
+			<label class="workoutContainer">
+				<input type="checkbox" id="stressedID">
+				<span class="checkmark"></span>
+			</label>
+			<label for="stressed" id="stressed">Stressed</label>
+
+			<label class="workoutContainer">
+				<input type="checkbox" id="dehydratedID">
+				<span class="checkmark"></span>
+			</label>
+			<label for="dehydration" id="dehydration">Dehrydrated</label>
+
+			<label class="workoutContainer">
+				<input type="checkbox" id="injuredID">
+				<span class="checkmark"></span>
+			</label>
+			<label for="injury" id="injury">Injured</label>
+
+		</div>
+		</form>
+  		<input type="button" value="Generate" id="submit" onClick="display();">
+  		<a href="mailto:ChrisGannon@creighton.edu" id="email">Email</a>
+  		</div>
+</div>​
+	<script src="js/main.js"></script>
+</body>
+</html>
