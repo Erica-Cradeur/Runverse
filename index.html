@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="manifest" href="manifest.json">
 	<link rel="script" href="js/main.js">
-	<link rel="icon" href="Runverse.png" type="image/x-icon" />   
+	<link rel="icon" href="RunverseAppIcon.png" type="image/x-icon" />   
 	<meta name="msapplication-TileColor" content="#FFFFFF">
 
 	<script LANGUAGE="JavaScript" type="text/javascript">
@@ -69,9 +69,8 @@
 	}
 
 	function copy(){
-		var copyText = document.getElementById("message");
-		copyText.select();
-	  	copyText.setSelectionRange(0, 99999);
+		message.select();
+	  	message.setSelectionRange(0, 99999);
 	  	document.execCommand("copy");
 	  	alert("Copied Log!");
 	}
