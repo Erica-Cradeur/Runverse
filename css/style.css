@@ -229,11 +229,11 @@ html, .fullscreen {
   margin-bottom: 50px;
 }
 
-#submit:hover, #email:hover {
+#submit:hover, #email:hover, #copy:hover {
   background-color:#C18C5D;
 }
 
-#submit:active, #email:hover{
+#submit:active, #email:active, #copy:active {
   position:relative;
   top:1px;
 }
@@ -245,7 +245,7 @@ html, .fullscreen {
   font-size: 20pt;
   padding: 10px 10px;
   color: black;
-  width: 800px;
+  width: 80%;
   text-align:center;
   margin:auto;
 }
