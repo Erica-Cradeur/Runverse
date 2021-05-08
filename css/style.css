@@ -9,7 +9,10 @@ body {
 
 #logo{
   display: flex-inline;
-  max-height: 400px; 
+  max-height: 200%; 
+  width: 70%;
+  margin: 0;
+  padding: 0;
 }
 
 /*Make content area fill the entire browser window */
@@ -26,8 +29,6 @@ html, .fullscreen {
 	margin: auto;
 	text-align: center;
 }
-
-
 
 #name, #date{
   border: 2px solid #C18C5D;
@@ -109,13 +110,13 @@ html, .fullscreen {
   margin:25px;
 }
 #soreness, #fatigue, #stressed, #injury, #otherP, #dehydration, #tightness, #tired{
-  font-size: 15pt !important;
+  font-size: 30pt !important;
 }
 
 #z1num, #z2num, #z3num, #otherTextbox{
     border: 2px solid #C18C5D;
     border-radius: 4px;
-    font-size: 12pt;
+    font-size: 30pt;
     padding: 10px 10px;
     margin-bottom: 50px;
     margin: 10px 10px;
@@ -169,7 +170,7 @@ html, .fullscreen {
 #workoutTextbox, #mentalTextbox{
   border: 2px solid #C18C5D;
   border-radius: 4px;
-  font-size: 12pt;
+  font-size: 30pt;
   padding: 10px 10px;
   margin: 8px 5;
   color: white;
@@ -185,7 +186,7 @@ html, .fullscreen {
   cursor:pointer;
   color:#ffffff;
   font-family:Courier New;
-  font-size:50px;
+  font-size:40pt;
   font-weight:bold;
   padding:12px 25px;
   text-decoration:none;
