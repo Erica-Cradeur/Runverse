@@ -64,6 +64,13 @@
 	  if(document.querySelector('#injuredID:checked') !== null){
 	  	message += "injured <br>";
 	  }
+
+	  var copyText = message;
+	  copyText.select();
+	  copyText.setSelectionRange(0, 99999);
+	  document.execCommand("copy");
+	  alert("copied log");
+
 	  document.getElementById("outputDiv").innerHTML = message;
 	  //DispWin.document.write(message);
 	}
