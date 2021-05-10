@@ -64,16 +64,12 @@
 	  if(document.querySelector('#injuredID:checked') !== null){
 	  	message += "injured <br>";
 	  }
-	  document.getElementById("outputDiv").innerHTML = message;
+	  
+	  document.getElementById("outputDiv").innerHTML += message + "<br>";
 	  //DispWin.document.write(message);
 	}
+	
 
-	function copy(){
-		message.select();
-	  	message.setSelectionRange(0, 99999);
-	  	document.execCommand("copy");
-	  	alert("Copied Log!");
-	}
 </script>
 
 
@@ -176,9 +172,8 @@
 		</div>
 		</form>
   		<input type="button" value="Generate" id="submit" onClick="display();">
-  		<button id="copy" onClick="copy();">Copy</button>
   		<a href="mailto:ChrisGannon@creighton.edu" id="email">Email</a>
-  		<div id="outputDiv" style="background-color:white">Log will Generate Here!</div>
+  		<div id="outputDiv" style="background-color:white">Log for this week: <br></div> 
   		<br>
   		</div>
 </div>​
