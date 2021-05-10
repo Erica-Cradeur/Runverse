@@ -6,11 +6,10 @@ const PRECACHE_URLS = [
   'index.html',
   './', // Alias for index.html
   'css/style.css',
-  'css/calendar.css',
   'js/main.js',
-  'js/calendar.js',
-  'favicon.ico',
-  'sw.js'
+  'mages/RunverseAppIcon.png',
+  'sw.js',
+  'manifest.json'
 ];
 
 // The install handler takes care of precaching the resources we always need.
